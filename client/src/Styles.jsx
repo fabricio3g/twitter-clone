@@ -41,6 +41,7 @@ export const Container = styled.div`
     font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: row;
+    padding: 0;
     margin: 0 auto;
     width: 1200px;
     height: 100vh;
@@ -78,7 +79,7 @@ export const ButtonContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 80%;
+    height: 70%;
     @media (max-width: 800px) {
    
     }
@@ -90,7 +91,7 @@ export const ButtonContainer = styled.div`
 
 
 export const Button =  styled.div`
-    height: 3rem;
+    height:  ${props => props.userBtn ? "4rem" : "3rem"};
     width: 80%;
     padding: .2rem;
     display: flex;
@@ -183,5 +184,49 @@ export const TextareaForm = styled.textarea`
         font-weight: 200;
         font-size: 15px;
     }
+`
+
+
+export const UserPhotoRound = styled.div`
+    height: 1rem;
+    padding: .2rem;
+    border-radius: 1;
+    margin: 3px 30px auto 0;
+    ${UserPhotoRound} > img{
+        margin: auto 0 auto 0;
+        width: 3rem;
+        border-radius: 6rem;
+    }
+   
+`
+
+
+export const TweetCardText = styled.textarea`
+    width: 70%;
+    outline: none;
+    border: none;
+    margin: auto 0 auto 70px;
+    resize: none;
+    overflow: hidden;
+    height: 120px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Lato', sans-serif;
+    :hover{
+        background-color: #e4e4e4;
+    }
+    
+`
+
+export const TweetCard = styled.div`
+    width: 100%;
+    padding: 5px;
+    ${TweetCard}:hover{
+        background-color: #e4e4e4;
+    }
+    ${TweetCard}:hover ${TweetCardText}:not(:hover) {
+        background-color: #e4e4e4;
+    }
+    
 `
 
