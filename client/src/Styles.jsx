@@ -4,7 +4,7 @@ import styled from 'styled-components'
 export  const TwitterIcon = styled.button`
     height: 4rem;
     width: 4rem;
-    margin-right: 15px;
+    margin-left: 25px;
     border:none;
     color: #41b3fa;
     background: none;
@@ -14,6 +14,24 @@ export  const TwitterIcon = styled.button`
     &:hover ${TwitterIcon}{
       background-color: #cee9ff;
       cursor: pointer;
+    }
+    ${TwitterIcon} > svg{
+        margin-right: 0px;
+        align-items: center;
+        align-self: center;
+    }
+    @media (max-width: 800px) {
+        ${TwitterIcon} > svg{
+          font-size: 1.2rem;
+          margin: 0 auto;
+        }
+
+        ${TwitterIcon}{
+            height: 2rem;
+            width: 0;
+            margin-right: 60px ;
+        }
+        
     }
 `
 
@@ -26,31 +44,48 @@ export const Container = styled.div`
     margin: 0 auto;
     width: 1200px;
     height: 100vh;
+    
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+    
 `
 
 export const TopNavPanel= styled.div`
-    display: flex;
-    position: fixed;
     top: 0;
-    align-items: center;
+    display: inline-block;
+    width: 100%;
+    
     font-weight: 800;
     cursor: pointer;
-    width: 540px;
     padding: 1.5rem;
     height: 2rem;
     background-color: #fff;
     border: 1px solid #EFF3F4;
+    ${TopNavPanel} > p{
+          line-height: 5px;
+           margin-bottom: 10px;
+        }
+    @media (max-width: 800px) {
+        ${TopNavPanel} > p{
+        }
+
+    }
 `
 
 
 export const ButtonContainer = styled.div`
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 80%;
+    @media (max-width: 800px) {
+   
+    }
 
 ` 
+
+
 
 
 
@@ -70,32 +105,62 @@ export const Button =  styled.div`
       background-color: ${props => props.background ? "#41b3fa" : "#e4e4e4;"};
       cursor: pointer;
     }
+    ${Button} > i{
+        
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+       width: 3rem;
+       ${Button} > i{
+           display: block;
+           margin: auto;
+    }
+    }
 ` 
 
 export const PanelLeft = styled.div`
     width: 30%;
-    padding: 1.5rem;
+    @media (max-width: 800px) {
+       width: 5.3rem;
+       padding: .5rem;
+    }
+    
 
 `
 export const PanelMid = styled.div`
-    position: relative;
     width: 45%;
+    overflow: auto;
+    @media (max-width: 800px) {
+       width: 100%;
+    }
 `
 export const PanelRight = styled.div`
-    /* width: 15%; */
+    width: 15%; 
+    @media (max-width: 800px) {
+       display: none;
+    }
 `
 
+export const TextPanelLeft = styled.p`
+    margin-left: 10px;
+    font-weight: ${props => props.tweet ? 800 : 400};
+    margin: ${props => props.center ? "0 auto" : "10px"};
+    @media (max-width: 800px) {
+       display: none;
+    }
 
+`
 
 export const TwittsContainers = styled.div`
     width: 100%;
     height: 100%;
     border: 1px solid #EFF3F4;
+    
 `
 
 
 export const FormCard = styled.form`
-    margin-top:3rem;
     width: 100%;
     height: 10rem;
     border: 1px solid #EFF3F4;
