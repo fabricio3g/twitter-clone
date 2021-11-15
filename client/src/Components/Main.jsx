@@ -1,9 +1,9 @@
-import { BsTwitter, BsFillHouseDoorFill, BsFillQuestionCircleFill} from 'react-icons/bs'
+import {BsChatQuoteFill, BsTwitter, BsFillHouseDoorFill, BsFillQuestionCircleFill} from 'react-icons/bs'
 
 import React,{ Component } from 'react'
 import { Container, Button, PanelLeft, PanelRight, 
   PanelMid, TwittsContainers, ButtonContainer, TwitterIcon, 
-  TopNavPanel, FormCard, TextareaForm
+  TopNavPanel, FormCard, TextareaForm, TextPanelLeft
 } from '../Styles.jsx'
 
 class Main extends Component{
@@ -21,17 +21,18 @@ class Main extends Component{
     return(
       <Container>
         <PanelLeft>
-           <TwitterIcon style={{"marginLeft": "25px"}}>
+           <TwitterIcon>
             <BsTwitter />
            </TwitterIcon>
           <ButtonContainer>
             <div>
-              <Button><BsFillHouseDoorFill style={{"marginLeft": "10px"}}/><p style={{"marginLeft": "10px"}}>Home</p></Button>
-              <Button><BsFillQuestionCircleFill style={{"marginLeft": "10px"}}/><p style={{"marginLeft": "10px"}}>About</p></Button>
+              <Button><BsFillHouseDoorFill style={{"marginLeft": "10px"}}/> <TextPanelLeft> Home </TextPanelLeft> </Button>
+              <Button><BsFillQuestionCircleFill style={{"marginLeft": "10px"}}/><TextPanelLeft>About</TextPanelLeft></Button>
             </div>
-            <Button background textColor><p style={{"margin": "0 auto", "fontWeight": "900"}}>Twittear</p></Button>
+            <Button background textColor><i className="tweetIcon"> <BsChatQuoteFill/></i><TextPanelLeft tweet center>Twittear</TextPanelLeft></Button>
           </ButtonContainer>
-          <Button><TwitterIcon/>
+          <Button>
+            <TwitterIcon/>
             <ul style={{"listStyle": "none", "fontSize": "15px"}}>
                 <li>Fabricio</li>    
                 <li><small style={{"fontWeight": "100"}}>@fabricio3g</small></li>
@@ -39,8 +40,9 @@ class Main extends Component{
           </Button>
         </PanelLeft>
         <PanelMid>
-          <TopNavPanel>Inicio</TopNavPanel>
+          
           <TwittsContainers>
+          <TopNavPanel><p>Inicio</p></TopNavPanel>
             <FormCard>
               <TextareaForm onChange={this.taxtareaFrom} placeholder="What's happening?"></TextareaForm>
               <Button background textColor style={{"width": "5rem", "height": "2.3rem", "marginRight":"1rem", "textAlign": "center"}}><p style={{"margin": "0 auto"}}>Tweet</p></Button>
