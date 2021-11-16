@@ -121,7 +121,7 @@ export const Button =  styled.div`
 ` 
 
 export const PanelLeft = styled.div`
-    width: 30%;
+    width: 20%;
     @media (max-width: 800px) {
        width: 5.3rem;
        padding: .5rem;
@@ -190,14 +190,33 @@ export const TextareaForm = styled.textarea`
 export const UserPhotoRound = styled.div`
     height: 1rem;
     padding: .2rem;
-    border-radius: 1;
+    border-radius: 1rem;
     margin: 3px 30px auto 0;
     ${UserPhotoRound} > img{
         margin: auto 0 auto 0;
         width: 3rem;
         border-radius: 6rem;
     }
+    @media (max-width: 800px) {
+        margin: auto auto 2.3rem -.2rem;
+        ${UserPhotoRound} > img{
+        width: 2.5rem;
+        border-radius: 6rem;
+    }
+    }
+
    
+`
+
+export const UserInfoUl = styled.ul`
+    list-style: none;
+    font-size: 15px;
+    @media (max-width: 800px) {
+       display: none;
+       
+    }
+
+
 `
 
 
