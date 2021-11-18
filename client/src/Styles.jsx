@@ -282,3 +282,15 @@ export const ImgResponsive = styled.img`
     background:#41b3fa68;
     width: 100%;
 `
+
+
+export const InputField = styled.input`
+    background:#f0f0f068;
+    width: 10rem;
+    padding:.5rem;
+    border:none;
+    border-radius: .4rem;
+    border: 2px solid #99999968;
+    height:2.2rem;
+
+`
