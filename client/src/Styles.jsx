@@ -43,7 +43,7 @@ export const Container = styled.div`
     flex-direction: row;
     padding: 0;
     margin: 0 auto;
-    width: 1200px;
+    width: 100%;
     height: 100vh;
     
     @media (max-width: 800px) {
@@ -51,6 +51,7 @@ export const Container = styled.div`
     }
     
 `
+
 
 export const TopNavPanel= styled.div`
     top: 0;
@@ -80,9 +81,6 @@ export const ButtonContainer = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: 70%;
-    @media (max-width: 800px) {
-   
-    }
 
 ` 
 
@@ -249,3 +247,38 @@ export const TweetCard = styled.div`
     
 `
 
+
+
+
+export const SmallCard = styled.div`
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    width: 30rem;
+    height: 15rem;
+    margin:10% auto;
+    padding: 5px;
+`
+
+export const ButtonRegister = styled.button`
+    margin:0 auto;
+    height: 3rem;
+    font-size:20px;
+    width: 10rem;
+    background:#1E9BEB;
+    color:white;
+    border:none;
+    border-radius: 2rem;
+    cursor:pointer;
+    ${ButtonRegister}:hover{
+        background:#41b3fa;
+    }
+
+`
+
+export const ImgResponsive = styled.img`
+    object-fit: cover;
+    background:#41b3fa68;
+    width: 100%;
+`
