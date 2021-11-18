@@ -20,6 +20,7 @@ module.exports = {
               
         }
       },
+      
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -31,4 +32,7 @@ module.exports = {
       template: path.join(__dirname, "src", "index.html"),
     }),
   ],
+  "devServer": {
+    historyApiFallback: true,
+  },
 };
