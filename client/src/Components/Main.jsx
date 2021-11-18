@@ -3,8 +3,8 @@ import React,{ Component } from 'react'
 import { Container, PanelRight } from '../Styles.jsx'
 
 // COMPONENTS
-import PanelLeftComponent from './PanelLeftComponent.jsx'
-import PanelMidComponent from './PanelMidComponent.jsx'
+import PanelLeftComponent from '../Components/PanelLeftComponent.jsx'
+import PanelMidComponent from '../Components/PanelMidComponent.jsx'
 
 
 
