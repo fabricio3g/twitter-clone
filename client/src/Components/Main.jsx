@@ -1,31 +1,30 @@
 
 import React,{ Component } from 'react'
 import { Container, PanelRight } from '../Styles.jsx'
-
+import { BrowserRouter, Routes, Route} from 'react-router-dom'
 // COMPONENTS
 import PanelLeftComponent from '../Components/PanelLeftComponent.jsx'
 import PanelMidComponent from '../Components/PanelMidComponent.jsx'
+import Register from '../Views/Register.jsx'
 
 
 
 class Main extends Component{
 
 
-  taxtareaFrom (e) {
-      e.target.value
-
-  }
-
-
+  
 
   render(){
 
     return(
       <Container>
         <PanelLeftComponent/>
-        <PanelMidComponent/>
-        <PanelRight>
-        </PanelRight>
+        <Routes basename="/">
+            <Route path="/home" element={<PanelMidComponent/>}/>
+            <Route path="/about" element={<div> About </div>}/>
+       </Routes>
+      <PanelRight>
+      </PanelRight>
       </Container>
     )
   }
