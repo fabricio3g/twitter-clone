@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import {Container, SmallCard, ButtonContainer, ButtonRegister, ImgResponsive} from '../Styles.jsx'
-import { Outlet, Link } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 class Register extends Component{
 
