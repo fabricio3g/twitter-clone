@@ -14,8 +14,8 @@ class PanelLeftComponent extends Component{
          </TwitterIcon>
         <ButtonContainer>
           <div>
-            <Button><BsFillHouseDoorFill style={{"marginLeft": "10px"}}/> <TextPanelLeft> <Link to="/home">Home </Link> </TextPanelLeft> </Button>
-            <Button><BsFillQuestionCircleFill style={{"marginLeft": "10px"}}/><TextPanelLeft><Link to="/About"> About </Link></TextPanelLeft></Button>
+            <Button><BsFillHouseDoorFill style={{"marginLeft": "10px"}}/> <TextPanelLeft> <Link style={{'textDecoration': 'none',  color: 'inherit'}} to="/home">Home </Link> </TextPanelLeft> </Button>
+            <Button><BsFillQuestionCircleFill style={{"marginLeft": "10px"}}/><TextPanelLeft><Link style={{'textDecoration': 'none', color: 'inherit'}} to="/About"> About </Link></TextPanelLeft></Button>
           </div>
           <div>
             <Button background textColor><i className="tweetIcon"> <BsChatQuoteFill/></i><TextPanelLeft tweet center>Twittear</TextPanelLeft></Button>
