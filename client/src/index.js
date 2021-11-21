@@ -5,7 +5,7 @@ import Register from './Views/Register.jsx'
 import Singup from './Views/Singup.jsx'
 import Login from './Views/Login.jsx'
 
-import { BrowserRouter, Routes, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 function isRegisterPageTrue(){
