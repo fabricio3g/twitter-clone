@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom'
 // COMPONENTS
 import PanelLeftComponent from '../Components/PanelLeftComponent.jsx'
 import PanelMidComponent from '../Components/PanelMidComponent.jsx'
-import Register from '../Views/Register.jsx'
 
 
 
