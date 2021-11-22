@@ -1,12 +1,16 @@
 import {BsChatQuoteFill, BsTwitter, BsFillHouseDoorFill, BsFillQuestionCircleFill} from 'react-icons/bs'
 import { Button, PanelLeft, ButtonContainer, TwitterIcon, TextPanelLeft, UserPhotoRound, UserInfoUl} from '../Styles.jsx'
 import React,{ Component } from 'react'
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate} from "react-router-dom";
 
-class PanelLeftComponent extends Component{
+function PanelLeftComponent (){
 
 
-  render(){
+    const navagateTo = ( route ) =>{
+      console.log('Hey this route is: ',route )
+    }
+
+
     return(
       <PanelLeft>
          <TwitterIcon>
@@ -33,7 +37,7 @@ class PanelLeftComponent extends Component{
         
       </PanelLeft> )
     
-  }
+
     
 
   }  
