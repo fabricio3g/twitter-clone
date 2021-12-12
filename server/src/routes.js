@@ -3,8 +3,6 @@ module.exports = (app) => {
     res.send("singup route");
   });
 
-  app.route("/login").get((req, res) => {
-    res.send("Login route");
-  });
+  app.route("/login").get((req, res) => res.send("Login route") );
 
 };
